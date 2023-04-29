@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+*, ::after,
+::before {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  padding: 3rem;
+}
+
+.body_title {
+  font-size: 3rem;
+  text-align: center;
+  padding-bottom: 5rem;
+}
+
+#cards {
+  display: grid;
+  grid-template-columns: repeat(3, 30rem);
+  grid-template-rows: repeat(7, 50rem);
+  gap: 15rem;
+  justify-items: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.img {
+  height: 20rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 1rem;
+}
+
+.description {
+  text-align: center;
+  padding: 3rem;
+  color: gray;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.catagory {
+  font-size: 1.5rem;
+}
+
+.price {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+button {
+  padding: 1rem 0.5rem;
+  border: hidden;
+  background-color: rgb(52, 52, 208);
+  color: aliceblue;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  cursor: pointer;
+}/*# sourceMappingURL=main.css.map */
