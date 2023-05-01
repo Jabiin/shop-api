@@ -1,0 +1,26 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 4rem;
+    .logo {
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+    ul {
+        display: flex;
+        gap: 3rem;
+        list-style-type: none;
+        li {
+            font-size: 1.3rem;
+            color: rgba(128, 128, 128, 0.916);
+            padding: 0.6rem;
+        }
+        .cart {
+            background-color: firebrick;
+            color: aliceblue;
+            height: min-content;
+            border-radius: 0.5rem;
+        }
+    }
+}
