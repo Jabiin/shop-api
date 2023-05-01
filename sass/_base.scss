@@ -22,10 +22,12 @@ body {
 
 #cards {
     display: grid;
-    grid-template-columns: repeat(3, 30rem);
+    grid-template-columns: repeat(3, 40rem);
     grid-template-rows: repeat(7, 50rem);
-    gap: 15rem;
+    row-gap: 30rem;
     justify-items: center;
     align-items: center;
     height: 60vh;
+    padding-top: 12rem;
+    justify-content: space-between;
 }
