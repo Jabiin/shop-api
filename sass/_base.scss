@@ -5,6 +5,9 @@
     padding: 0;
 }
 
+$bp-mobile: 600px;
+
+
 html {
     box-sizing: border-box;
     font-size: 62.5%;
@@ -30,4 +33,9 @@ body {
     height: 60vh;
     padding-top: 12rem;
     justify-content: space-between;
+    @media only screen and (max-width: $bp-mobile){
+        font-size: 50%;
+        grid-template-columns: 1fr;
+        
+    }
 }
