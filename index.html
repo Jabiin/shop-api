@@ -9,15 +9,22 @@
 </head>
 <body>
     <nav>
+        
         <div class="logo">Shop Api</div>
         <ul>
             <li>HOME</li>
             <li>CONTACT US</li>
-            <li class="cart">CART</li>
+                <ion-icon name="sunny" class="icon"></ion-icon>
+                <label class="theme-switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            
         </ul>
     </nav>
     <div class="hero">
-        
+        <input id="search-item" class="input-grey-rounded" type="text" placeholder="Search" onkeyup="search()">
     </div>
     <div id="cards">
     </div>
