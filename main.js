@@ -1,61 +1,42 @@
 
 const api = 'https://fakestoreapi.com/products';
 
-
-
-
-
-async function getShopItems(){
-    const data = await fetch(api)
-    const result = await data.json()
-    // try {
-    //     getShopItems()
-    // } catch (e) {
-    //     console.error(e)
-    // }
-    let displayResult = '';
-   for await(let res of result){
-    displayResult += `
-    <div class="card">
-    <h1 class="title">${res.title}</h1>
-    <img src=${res.image} alt="" class="img">
-    <p class="description">Description: ${res.description}</p>
-    <p class="catagory">Catebory: ${res.category}</p>
-    <p class="price">Price: ${res.price}</p>
-    </div>`
-    
-    document.getElementById('cards').innerHTML = displayResult;
-   }  
+async function getShopItems() {
+   const data = await fetch(api);
+   const result = await data.json();
+   let displayResult = '';
+   for await (let res of result) {
+      displayResult += `
+         <div class="card">
+            <h1 class="title">${res.title}</h1>
+            <img src=${res.image} alt="" class="img">
+            <p class="description">Description: ${res.description}</p>
+            <p class="category">Category: ${res.category}</p>
+            <p class="price">Price: ${res.price}</p>
+         </div>`;
+      document.getElementById('cards').innerHTML = displayResult;
+   }
 }
 
-getShopItems()
+getShopItems();
 
-
-
-const search = () => {
-    const searchBox = document.getElementById('search-item').value.toUpperCase();
-    const shopItems = document.getElementById('cards')
-    const products = document.querySelectorAll('.card')
-    const productName = shopItems.getElementsByTagName('h1')
-
-    for (let i = 0; i < productName.length; i++) {
-        let match = products[i].getElementsByTagName('h1')[0];
-
-        if (match) {
-            let textValue = match.textContent || match.innerHTML
-
-            if (textValue.toUpperCase().indexOf(searchBox) > -1) {
-                products[i].style,display = "";
-                
-            } else {
-                products[i].style.display = "none";
-            } 
-            
-        }
-        
-    }
-   
+function search() {
+   const searchBox = document.getElementById('search-item').value.toUpperCase();
+   const products = document.querySelectorAll('.card');
+   for (let i = 0; i < products.length; i++) {
+      let productName = products[i].getElementsByTagName('h1')[0];
+      if (productName) {
+         let textValue = productName.textContent || productName.innerHTML;
+         if (textValue.toUpperCase().indexOf(searchBox) > -1) {
+            products[i].style.display = "";
+         } else {
+            products[i].style.display = "none";
+         }
+      }
+   }
 }
+
+document.getElementById('search-item').addEventListener('input', search);
 
 const toggle = document.querySelector('.theme-switch input[type="checkbox"]');
 
