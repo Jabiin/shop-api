@@ -1,2 +1,2 @@
 # shop-api
-fake shop api with vanilla js 
+shop api with dark mode and search function
